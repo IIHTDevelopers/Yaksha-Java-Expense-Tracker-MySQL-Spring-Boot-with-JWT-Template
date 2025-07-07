@@ -1,9 +1,9 @@
-package com.expensetracker.exception;
+package com.todowithjwt.exception;
 
-import static com.expensetracker.utils.TestUtils.businessTestFile;
-import static com.expensetracker.utils.TestUtils.currentTest;
-import static com.expensetracker.utils.TestUtils.testReport;
-import static com.expensetracker.utils.TestUtils.yakshaAssert;
+import static com.todowithjwt.utils.TestUtils.businessTestFile;
+import static com.todowithjwt.utils.TestUtils.currentTest;
+import static com.todowithjwt.utils.TestUtils.testReport;
+import static com.todowithjwt.utils.TestUtils.yakshaAssert;
 import static org.mockito.Mockito.when;
 
 import java.util.Date;
@@ -15,11 +15,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import com.expensetracker.entity.Expense;
-import com.expensetracker.exception.ResourceNotFoundException;
-import com.expensetracker.repository.ExpenseRepository;
-import com.expensetracker.repository.UserInfoRepository;
-import com.expensetracker.service.impl.ExpenseServiceImpl;
+import com.todowithjwt.entity.Expense;
+import com.todowithjwt.repository.ExpenseRepository;
+import com.todowithjwt.repository.UserInfoRepository;
+import com.todowithjwt.service.impl.ExpenseServiceImpl;
 
 @SpringBootTest
 public class ExpenseExceptionTest {
