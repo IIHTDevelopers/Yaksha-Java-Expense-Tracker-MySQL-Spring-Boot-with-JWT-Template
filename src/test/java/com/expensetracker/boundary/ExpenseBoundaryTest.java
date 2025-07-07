@@ -1,9 +1,9 @@
-package com.expensetracker.boundary;
+package com.todowithjwt.boundary;
 
-import static com.expensetracker.utils.TestUtils.boundaryTestFile;
-import static com.expensetracker.utils.TestUtils.currentTest;
-import static com.expensetracker.utils.TestUtils.testReport;
-import static com.expensetracker.utils.TestUtils.yakshaAssert;
+import static com.todowithjwt.utils.TestUtils.boundaryTestFile;
+import static com.todowithjwt.utils.TestUtils.currentTest;
+import static com.todowithjwt.utils.TestUtils.testReport;
+import static com.todowithjwt.utils.TestUtils.yakshaAssert;
 
 import java.io.IOException;
 import java.util.Set;
@@ -12,7 +12,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.expensetracker.dto.ExpenseDTO;
+import com.todowithjwt.dto.ExpenseDTO;
 
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
@@ -35,7 +35,7 @@ public class ExpenseBoundaryTest {
 	}
 
 	@Test
-	public void testIdNotNull() throws IOException {
+	public void testExpenseIdNotNull() throws IOException {
 		ExpenseDTO expenseDTO = new ExpenseDTO();
 		expenseDTO.setId(null);
 		Set<ConstraintViolation<ExpenseDTO>> violations = validator.validate(expenseDTO);
@@ -47,7 +47,7 @@ public class ExpenseBoundaryTest {
 	}
 
 	@Test
-	public void testNameNotBlank() throws IOException {
+	public void testExpenseNameNotBlank() throws IOException {
 		ExpenseDTO expenseDTO = new ExpenseDTO();
 		expenseDTO.setName("");
 		Set<ConstraintViolation<ExpenseDTO>> violations = validator.validate(expenseDTO);
